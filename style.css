@@ -6,21 +6,55 @@
     box-sizing: border-box;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
 #container{
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
     flex-wrap: wrap;
+
+    max-height: 500px;
+    max-width: 500px;
+
+    
 }
 
 .children{
-    height: 1em;
     width: 1em;
-    outline: 1px solid black;
+    height: 1em;
+    
+    outline: 0.1px solid black;
+
+    transition: background 0.15s;
 }
 
 
 .hovered{
     background-color: black;
+}
+
+
+.howMany{
+    border: none;
+    height: 20px;
+    width: 60px;
+    border-radius: 5px;
+    box-shadow: 0.3em 0.3em 0.3em black;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.howMany:hover{
+    transform: translate(-0.1em, -0.1em);
+    box-shadow: 0.4em 0.4em 0.2em black;
+}
+
+.howMany:active{
+    transform: translate(0.2em, 0.2em);
+    box-shadow: 0.2em 0.2em 0.2em black;
 }
