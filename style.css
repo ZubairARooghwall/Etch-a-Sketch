@@ -5,3 +5,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.children{
+    height: 1em;
+    width: 1em;
+    outline: 1px solid black;
+}
+
+
+.hovered{
+    background-color: black;
+}
