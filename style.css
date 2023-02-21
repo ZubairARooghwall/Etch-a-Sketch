@@ -6,55 +6,88 @@
     box-sizing: border-box;
 }
 
-.wrapper{
+:root{
+    --width: 400 / 16;
+}
+
+
+
+html, body{
+    height: 100%;
+
+}
+
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: antiquewhite;
+}
+
+.header{
+    font-size: 50px;
+    font-family: Roboto, Segeo UI, system-ui;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
 #container{
-    display: flex;
-    flex-wrap: wrap;
-
-    max-height: 500px;
-    max-width: 500px;
-
-    
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 400px;
+    height: 400px;
+    box-shadow: 5px 5px 20px black;
 }
 
 .children{
-    width: 1em;
-    height: 1em;
-    
-    outline: 0.1px solid black;
-
-    transition: background 0.15s;
+    transition: background 0.15s, transform 0.15s;
 }
 
 
 .hovered{
     background-color: black;
+
+}
+
+.hovered:hover, .children:hover{
+    transform: scale(1.3);
 }
 
 
 .howMany{
     border: none;
-    height: 20px;
-    width: 60px;
+    height: 30px;
+    width: 90px;
     border-radius: 5px;
     box-shadow: 0.3em 0.3em 0.3em black;
-
+    font-size: small;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .howMany:hover{
     transform: translate(-0.1em, -0.1em);
-    box-shadow: 0.4em 0.4em 0.2em black;
+    box-shadow: 0.5em 0.5em 0.2em black;
 }
 
 .howMany:active{
     transform: translate(0.2em, 0.2em);
     box-shadow: 0.2em 0.2em 0.2em black;
 }
+
+
+
+#gray{
+    display: none;
+}
+
